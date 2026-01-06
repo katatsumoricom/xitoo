@@ -1,0 +1,47 @@
+/********
+Type scale
+1.02
+1.28
+1.6
+2
+2.5
+3.125
+3.9
+4.8
+6.1
+7.6
+9.5
+********/
+
+$n: 1.25;
+$fb: 3.125rem;
+$fn: 1.6rem;
+$fs: 1.28rem;
+$bold: 900;
+
+$basecolor: #040103;
+$maincolor: #a40f1e;
+$accentcolor: #96ff00;
+
+$gothic: Avenir, "Helvetica Neue", "Helvetica", Arial, "YuGothic",
+  "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+$mincho: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho",
+  "MS PMincho", serif;
+$mincho-h: "Yuji Syuku", "Times New Roman", "YuMincho", "Hiragino Mincho ProN",
+  "Yu Mincho", "MS PMincho", serif;
+
+@mixin font {
+  color: $maincolor;
+  font-family: $gothic;
+  font-display: swap;
+  font-size: $fn;
+  font-weight: 400;
+  line-height: 1.7;
+  vertical-align: baseline;
+}
+
+@mixin heading($weight: $bold) {
+  font-family: $gothic;
+  line-height: 1.2;
+  font-weight: $weight;
+}

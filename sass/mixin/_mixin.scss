@@ -1,0 +1,107 @@
+@use "temp" as *;
+
+@use "sass:math";
+
+@mixin clamp_fontsize($fs_min, $width_small, $width_large, $fs_max) {
+  $preferred_vw_base: math.div(
+    ($fs_max - $fs_min),
+    ($width_large - $width_small)
+  );
+  $preferred_vw: math.div(round(($preferred_vw_base * 100000)), 1000) * 1vw;
+  $preferred_rem: math.div(
+      round(($width_small * -1 * $preferred_vw_base + $fs_min) * 100),
+      100
+    ) * 0.1rem;
+  font-size: clamp(
+    $fs_min * 0.1rem,
+    $preferred_rem + $preferred_vw,
+    $fs_max * 0.1rem
+  );
+}
+
+@mixin gradient($angle: 135deg, $length1: 0%, $length2: 100%) {
+  background: linear-gradient(
+    $angle,
+    $maincolor $length1,
+    saturate($maincolor, 20%) $length2
+  );
+}
+
+@mixin borderBottom($borderColor: $maincolor) {
+  border-bottom: solid 1px $borderColor;
+}
+
+@mixin border($borderColor: $maincolor) {
+  border: solid 1px $borderColor;
+}
+
+$shadowKey: (
+  "border": "#{rgba($maincolor, 0.5)} 0px 10px 10px -10px",
+  "all": "#{rgba($maincolor, 0.5)} 0px 0px 20px -10px",
+) !default;
+
+@mixin shadow($bs: all) {
+  box-shadow: #{map-get($shadowKey, $bs)};
+}
+
+@mixin linkColor($color: $accentcolor) {
+  color: $color;
+  text-decoration: underline;
+
+  &:hover {
+    color: darken($color, 15%);
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: desaturate($color, 25%);
+  }
+}
+
+@mixin margin($top: null, $right: null, $bottom: null, $left: null) {
+  @if $top !=null {
+    margin-top: $top;
+  }
+
+  @if $right !=null {
+    margin-right: $right;
+  }
+
+  @if $bottom !=null {
+    margin-bottom: $bottom;
+  }
+
+  @if $left !=null {
+    margin-left: $left;
+  }
+}
+
+@mixin padding($top: null, $right: null, $bottom: null, $left: null) {
+  @if $top !=null {
+    padding-top: $top;
+  }
+
+  @if $right !=null {
+    padding-right: $right;
+  }
+
+  @if $bottom !=null {
+    padding-bottom: $bottom;
+  }
+
+  @if $left !=null {
+    padding-left: $left;
+  }
+}
+
+$breakpoints: (
+  "sm": "screen and (max-width: 428px)",
+  "md": "screen and (max-width: 768px)",
+  "lg": "screen and (max-width: 992px)",
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

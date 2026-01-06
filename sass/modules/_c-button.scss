@@ -1,0 +1,51 @@
+@use "../mixin" as *;
+
+.c-button {
+  color: $basecolor;
+  font-weight: $bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px $accentcolor;
+  border-radius: 1rem;
+  background-color: rgba(109, 109, 109, 0.7);
+  @include margin(0, auto, 0, auto);
+  @include padding($fn, $fb, $fn, $fb);
+  width: fit-content;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+
+  @include mq() {
+    @include padding(1rem, $fn, 1rem, $fn);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgba($accentcolor, 1);
+    transition: all 0.2s ease-in-out;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: $fn * $n;
+    height: $fn * $n;
+    background-image: url("../static/img/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    @include margin(0, 0, 0, 1rem);
+  }
+}

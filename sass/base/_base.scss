@@ -1,0 +1,64 @@
+@use "../mixin" as *;
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  height: -webkit-fill-available;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  @include font;
+  position: relative;
+  background-color: $basecolor;
+  color: $maincolor;
+}
+
+h1 {
+  @include heading;
+  font-size: $fb;
+  font-weight: $bold;
+  max-height: fit-content;
+}
+
+h2 {
+  @include heading;
+  font-size: clamp(3.9rem, 2.938rem + 1.55vw, 4.8rem);
+  margin-bottom: $fb;
+
+  @include mq() {
+    margin-bottom: $fn;
+  }
+}
+
+h3 {
+  @include heading;
+  font-size: $fn * $n;
+}
+
+h4 {
+  @include heading;
+  font-size: 2rem;
+  margin-bottom: $fn;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+figure {
+  figcaption {
+    font-size: $fs;
+  }
+}

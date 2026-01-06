@@ -1,0 +1,25 @@
+@use "../mixin" as *;
+
+.c-footer {
+  text-align: center;
+  display: grid;
+  place-content: center;
+  h1 {
+    width: clamp(1px, 100%, 100px);
+    @include margin(0, auto, $fb, auto);
+  }
+
+  &__nav {
+    @include margin(0, auto, $fb * 2, auto);
+    ul {
+      display: flex;
+      gap: $fn;
+
+      @include mq() {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0;
+      }
+    }
+  }
+}

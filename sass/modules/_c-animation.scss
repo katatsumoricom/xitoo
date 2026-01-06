@@ -1,0 +1,96 @@
+@use "../mixin" as *;
+
+.c-animation {
+  &__loading {
+    width: 100vw;
+    height: 100vh;
+    transition: all 1s;
+    background-color: $basecolor;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: grid;
+    place-items: center;
+  }
+
+  &__loading-content {
+    width: clamp(1px, 80vw, 450px);
+
+    img {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__loading-bar {
+    width: clamp(1px, 80vw, 300px);
+    height: 8px;
+    border-radius: inherit;
+    @include margin(0, auto, 0, auto);
+  }
+
+  &__sclolldown {
+    position: fixed;
+    right: $fn;
+    bottom: $fn;
+    writing-mode: vertical-rl;
+
+    @include mq() {
+      right: 0.5rem;
+    }
+
+    &::after {
+      content: "";
+      width: 2px;
+      height: 200%;
+      background-color: $maincolor;
+      position: absolute;
+      top: -100%;
+      right: 0;
+      transform-origin: top left;
+      animation: line 5s ease-in-out 1s infinite;
+
+      @include mq() {
+        height: 100%;
+        top: -101%;
+        right: 50%;
+      }
+
+      @keyframes line {
+        0% {
+          transform: scale(1, 0);
+        }
+
+        20% {
+          transform: scale(1, 0);
+        }
+
+        90% {
+          transform: scale(1, 1);
+        }
+
+        100% {
+          transform: scale(1, 1);
+        }
+      }
+    }
+  }
+
+  &__appear-invisible {
+    // opacity: 0;
+
+    @include mq() {
+      opacity: 1;
+    }
+  }
+
+  &__appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}

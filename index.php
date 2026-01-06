@@ -1,0 +1,143 @@
+<?php include('components/head.php'); ?>
+<!-- DONE:ナビ スタイリング -->
+<!-- DONE:トップに戻るボタン -->
+<!-- DONE:ホバーアニメーション -->
+<!-- DONE:背景にノイズ載せる -->
+<!-- TODO:トップ パララックスにしたい -->
+
+<!-- DONE:インフォページ実装 -->
+<!-- DONE:ガイドラインページ実装 -->
+
+<!-- DONE:ローディング画面 -->
+<!-- DONE:sp メニュー閉じるボタン 挙動 -->
+<!-- DONE:レスポンシブ対応できてるか確認 -->
+
+<!-- TODO:Githubに上げて確認してもらう -->
+<!-- TODO:トップ 背景にノイズ→アイコン画像の背景透過もらえるか聞く -->
+<!-- TODO:ファビコンもらう -->
+
+<!-- TODO: 1/6以降 micro cms対応 -->
+<!-- TODO: 1/6以降 お知らせページ タグ付けできたらやる -->
+<!-- TODO: 1/6以降 お問い合わせ実装 -->
+<!-- TODO: 1/6以降 トップにあしらいかアニメーションつけたい（グリッチとか？） -->
+
+<!-- TODO: 納品前 不要なSCSS消す -->
+
+<div class="c-layout__scanlines"></div>
+<div class="c-layout__bgnoise"></div>
+<div class="c-layout">
+    <?php include('components/header.php'); ?>
+    
+    <div id="profile" class="p-profile">
+        <div class="p-profile__layout">
+            <h2><img src="./static/img/top.svg" alt="蟹木しとお VOCALOIDプロデューサー インディーズゲームクリエイター イラストレーター"></h2>
+            <figure><img src="./static/img/profile.webp" alt="蟹木しとお プロフィール写真"></figure>
+        </div>
+        <div class="p-profile__biography">
+            <p>蟹木しとお</p>
+            <p>作曲家／シンガーソングライター／イラストレーター／ゲームクリエイター</p>
+
+            <p>2013年、動画共有サイトにてボーカロイドを用いたオリジナル楽曲を発表し、創作活動を開始。<br />
+                以降、物語性と哲学的テーマを内包した独自の世界観を軸に、多彩な音楽作品を発表している。</p>
+
+            <p>イラストレーションは活動以前より継続しており、自身の楽曲MVやビジュアルアートは、基本的にすべて自身の手で制作。<br />
+                音楽と映像、物語が一体となった作品づくりを得意とし、セルフプロデュースによるマルチクリエイションを特徴としている。</p>
+
+            <p>アーティストへの楽曲提供や、ソーシャルゲームとのタイアップなど、外部プロジェクトへの参加も精力的に行う。<br />
+                また、漫画執筆、ゲーム制作、自身による歌唱など、表現領域は多岐にわたり、ジャンルを横断するクリエイターとして活動の幅を広げ続けている。</p>
+
+            <p>代表作には、「戯言の雑音」「404：虚像」「シロクロリバーシ」「一ツ眼リッパー殺人事件」「逢魔時の帰り方」など。</p>
+        </div>
+
+    </div>
+    <main class="c-layout__container">
+        <div class="c-layout__content p-info">
+            <section class="p-info-news">
+                <h2><img src="./static/img/information.svg" alt="INFORMATION"></h2>
+                <dl class="p-info-news__list">
+                    <div class="p-info-news__item">
+                        <dt>2024.06.01</dt>
+                        <dd>新曲「タイトル未定」公開予定</dd>
+                    </div>
+                    <div class="p-info-news__item">
+                        <dt>2024.06.01</dt>
+                        <dd>新曲「タイトル未定」公開予定</dd>
+                    </div>
+                    <div class="p-info-news__item">
+                        <dt>2024.06.01</dt>
+                        <dd>新曲「タイトル未定」公開予定</dd>
+                    </div>
+                </dl>
+                <a href="" class="c-button">READ MORE</a>
+            </section>
+            <section class="c-layout__content p-info-link">
+                <h2><img src="./static/img/link.svg" alt="LINK"></h2>
+                <div class="p-info-link__list">
+                    <a href="" class="c-button" target="_blank">リンク先名1</a>
+                    <a href="" class="c-button" target="_blank">リンク先名2</a>
+                    <a href="" class="c-button" target="_blank">リンク先名3</a>
+                    <a href="" class="c-button" target="_blank">リンク先名4</a>
+                    <a href="" class="c-button" target="_blank">リンク先名1</a>
+                    <a href="" class="c-button" target="_blank">リンク先名2</a>
+                    <a href="" class="c-button" target="_blank">リンク先名3</a>
+                    <a href="" class="c-button" target="_blank">リンク先名4</a>
+                </div>
+                <a class="c-textlink" href="guideline">作品使用についてのガイドライン</a>
+            </section>
+        </div><!-- /.p-info -->
+        <div id="works" class="c-layout__content p-works">
+            <h2><img src="./static/img/works.svg" alt="WORKS"></h2>
+            <a class="c-textlink" href="guideline">作品使用についてのガイドライン</a>
+            <section class="p-works__music">
+                <h3><img src="./static/img/music.svg" alt="MUSIC"></h3>
+                <div class="p-works__content">
+                    <div class="youtube p-works__hover">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=YcOjYUwFW3VvsUUC&amp;list=PLordceDMCDfmJnDUtsBXrRGJEqrUQAGxm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-works__button-flex">
+                        <a href="" class="c-button" target="_blank">リンク先名1</a>
+                        <a href="" class="c-button" target="_blank">リンク先名2</a>
+                        <a href="" class="c-button" target="_blank">リンク先名3</a>
+                    </div>
+                </div>
+            </section>
+            <section class="p-works__game">
+                <h3><img src="./static/img/game.svg" alt="GAME"></h3>
+                <div class="p-works__content c-carousel__wrapper">
+                    <ul class="c-carousel__container">
+                        <li class="c-carousel__item"><a class="p-works__hover" href=""><img src="./static/img/hitotsume_logo.webp" alt="一ツ眼リッパー"></a></li>
+                        <li class="c-carousel__item"><a class="p-works__hover" href=""><img src="./static/img/hitotsume_logo.webp" alt="一ツ眼リッパー"></a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="p-works__utau">
+                <h3><img src="./static/img/utau.svg" alt="UTAU"></h3>
+                <div class="p-works__content">
+                    <a class="p-works__hover" href=""><img src="./static/img/magene_logo.webp" alt="magune"></a>
+                </div>
+            </section>
+            <section class="p-works__art">
+                <h3><img src="./static/img/art.svg" alt="ART"></h3>
+                <div class="p-works__content">
+                    <figure><img src="./static/img/art.webp" alt="ART"></figure>
+                    <div class="p-works__button-flex">
+                        <a href="" class="c-button" target="_blank">リンク先名1</a>
+                        <a href="" class="c-button" target="_blank">リンク先名2</a>
+                    </div>
+                </div>
+            </section>
+            <section class="p-works__shop">
+                <h3><img src="./static/img/shop.svg" alt="SHOP"></h3>
+                <div class="p-works__content">
+                    <a class="p-works__hover" href=""><img src="./static/img/shop.webp" alt="ART"></a>
+                </div>
+            </section>
+        </div><!-- /.p-works -->
+
+    </main><!-- /.c-layout__container -->
+
+    <!-- <a href="#" id="return" class="c-mq__fixed-return"><img src="./static/img/return.png" alt="トップに戻る"><img src="./static/img/blank.svg" alt="トップに戻る"></a> -->
+    
+</div><!-- /.c-layout -->
+
+<?php include('components/footer.php'); ?>

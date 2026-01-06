@@ -1,0 +1,27 @@
+@use "../mixin" as *;
+
+.p-information {
+  h2 {
+    max-width: 40rem;
+    @include margin(0, auto, $fb * 2, auto);
+  }
+  &__content {
+    background-color: rgb(168, 168, 168);
+    max-width: 40em;
+    @include margin($fn, auto, $fb * 2, auto);
+    @include padding($fb, $fb, $fb, $fb);
+
+    section {
+      color: $basecolor;
+      margin-top: 0;
+    }
+
+    h3 {
+      margin-bottom: $fb;
+    }
+
+    figure {
+      @include margin(0, auto, $fb, auto);
+    }
+  }
+}

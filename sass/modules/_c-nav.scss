@@ -1,0 +1,142 @@
+@use "../mixin" as *;
+
+.c-nav__button,
+#nav-check {
+  display: none;
+}
+
+.c-nav {
+  position: fixed;
+  top: 120px;
+  padding-left: $fn;
+  // mix-blend-mode: difference;
+  line-height: 2.5;
+  font-weight: $bold;
+  font-size: clamp(1.2rem, 1.086rem + 0.42vw, 1.6rem);
+  z-index: 2;
+
+  @include mq() {
+    opacity: 1;
+    background-color: #6d6d6d;
+    mix-blend-mode: normal;
+    width: 80vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;
+    transform: translateX(150%);
+    transition: all 0.3s ease-in-out;
+    display: grid;
+    place-content: center;
+    box-shadow: 0 -6px 12px -6px rgba(0, 0, 0, 0.5);
+
+    //ハンバーガーボタン
+    &__button {
+      position: fixed;
+      top: $fn;
+      right: $fn;
+      width: 36px;
+      height: 28px;
+      cursor: pointer;
+      z-index: 99;
+
+      &,
+      .hamburger {
+        display: inline-block;
+        transition: all 0.2s;
+        box-sizing: border-box;
+      }
+
+      .hamburger {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $accentcolor;
+
+        &:nth-of-type(1) {
+          top: 0;
+        }
+
+        &:nth-of-type(2) {
+          top: 13px;
+        }
+
+        &:nth-of-type(3) {
+          bottom: 0;
+        }
+      }
+
+      .menu-text::after {
+        content: "MENU";
+        display: block;
+        color: $accentcolor;
+        font-size: 1rem;
+        font-weight: $bold;
+        position: absolute;
+        bottom: -18px;
+        left: 0px;
+        display: grid;
+        place-items: center;
+        width: 100%;
+      }
+    }
+
+    //ハンバーガーボタン（Close）
+    #nav-check:checked ~ &__button {
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        content: "";
+        width: 50px;
+        height: 50px;
+        margin: -25px 0 0 -25px;
+        border: solid 2px $accentcolor;
+        border-radius: 50%;
+        transition: all 0.2s;
+      }
+      .hamburger {
+        &:nth-of-type(1) {
+          transform: translateY(13px) rotate(45deg);
+        }
+
+        &:nth-of-type(2) {
+          opacity: 0;
+        }
+
+        &:nth-of-type(3) {
+          transform: translateY(-13px) rotate(-45deg);
+        }
+      }
+
+      .menu-text::after {
+        content: "";
+      }
+    }
+
+    &__overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.4s;
+      z-index: 3;
+      backdrop-filter: blur(6px);
+    }
+  }
+}
+
+#nav-check:checked ~ .c-nav {
+  opacity: 1;
+  z-index: 80;
+  transform: translateX(0);
+}
+
+#nav-check:checked ~ .c-nav__overlay {
+  opacity: 1;
+  pointer-events: auto;
+}

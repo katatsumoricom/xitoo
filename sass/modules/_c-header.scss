@@ -1,0 +1,12 @@
+@use "../mixin" as *;
+
+header {
+  h1 {
+    position: fixed;
+    width: clamp(1px, 11rem, 150px);
+    @include margin($fn, auto, 0, auto);
+    top: 0;
+    @include padding(0, $fn, 0, $fn);
+    z-index: 2;
+  }
+}

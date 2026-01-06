@@ -1,0 +1,33 @@
+@use "../mixin" as *;
+
+#news {
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../static/img/bg_news.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        opacity: 0.05;
+        z-index: -1;
+
+        @include mq() {
+            display: none;
+        }
+    }
+
+    .c-link__button {
+        position: fixed;
+        bottom: 4.8rem;
+        right: $fn;
+        border: solid 1px $accentcolor;
+
+        @include mq() {
+            position: static;
+        }
+    }
+}

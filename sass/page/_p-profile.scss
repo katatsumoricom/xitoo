@@ -1,0 +1,44 @@
+@use "../mixin" as *;
+
+.p-profile {
+  margin-top: $fb * 3;
+  margin-bottom: $fb * 8;
+
+  &__layout {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: $fn;
+    padding-top: $fb;
+    padding-bottom: $fb;
+    width: 100%;
+
+    @include mq() {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      width: clamp(1px, 100%, 400px);
+      margin-bottom: 0;
+      padding-bottom: $fn;
+    }
+
+    figure {
+      width: clamp(1px, 100%, 300px);
+    }
+  }
+
+  &__biography {
+    color: #fff;
+    width: clamp(1px, 85%, 40em);
+    margin: 0 auto;
+    padding-top: $fb;
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+}
