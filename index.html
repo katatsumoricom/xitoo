@@ -33,45 +33,6 @@
       </div>
     </div>
 
-    <header>
-      <h1>
-        <a href="index"
-          ><img src="./static/img/logo.svg" alt="蟹木しとお オフィシャルサイト"
-        /></a>
-      </h1>
-      <input type="checkbox" id="nav-check" />
-      <label for="nav-check" class="c-nav__button">
-        <span class="hamburger"></span>
-        <span class="hamburger"></span>
-        <span class="hamburger"></span>
-        <span class="menu-text"></span>
-      </label>
-      <div class="c-nav__overlay c-nav__link"></div>
-      <nav id="nav" class="c-nav">
-        <ul>
-          <li class="c-nav__link">
-            <a class="c-textlink" href="index#profile">PROFILE</a>
-          </li>
-          <li class="c-nav__link">
-            <a class="c-textlink" href="information">INFORMATION</a>
-          </li>
-          <li class="c-nav__link">
-            <a class="c-textlink" href="index#works">WORKS</a>
-          </li>
-        </ul>
-        <ul>
-          <li class="c-nav__link">
-            <a class="c-textlink" href="guideline">GUIDELINE</a>
-          </li>
-          <li class="c-nav__link"><a class="c-textlink" href="">Skeb</a></li>
-          <li class="c-nav__link">
-            <a class="c-textlink" href="">SHOP（BOOTH）</a>
-          </li>
-          <li class="c-nav__link"><a class="c-textlink" href="">CONTACT</a></li>
-        </ul>
-      </nav>
-    </header>
-
     <!-- <?php include('components/head.php'); ?> -->
 
     <!-- DONE:ナビ スタイリング -->
@@ -101,7 +62,49 @@
     <div class="c-layout__scanlines"></div>
     <div class="c-layout__bgnoise"></div>
     <div class="c-layout">
-      <?php include('components/header.php'); ?>
+      <header>
+        <h1>
+          <a href="index"
+            ><img
+              src="./static/img/logo.svg"
+              alt="蟹木しとお オフィシャルサイト"
+          /></a>
+        </h1>
+        <input type="checkbox" id="nav-check" />
+        <label for="nav-check" class="c-nav__button">
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="menu-text"></span>
+        </label>
+        <div class="c-nav__overlay c-nav__link"></div>
+        <nav id="nav" class="c-nav">
+          <ul>
+            <li class="c-nav__link">
+              <a class="c-textlink" href="index#profile">PROFILE</a>
+            </li>
+            <li class="c-nav__link">
+              <a class="c-textlink" href="information">INFORMATION</a>
+            </li>
+            <li class="c-nav__link">
+              <a class="c-textlink" href="index#works">WORKS</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="c-nav__link">
+              <a class="c-textlink" href="guideline">GUIDELINE</a>
+            </li>
+            <li class="c-nav__link"><a class="c-textlink" href="">Skeb</a></li>
+            <li class="c-nav__link">
+              <a class="c-textlink" href="">SHOP（BOOTH）</a>
+            </li>
+            <li class="c-nav__link">
+              <a class="c-textlink" href="">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- <?php include('components/header.php'); ?> -->
 
       <div id="profile" class="p-profile">
         <div class="p-profile__layout">
@@ -164,7 +167,7 @@
                 <dd>新曲「タイトル未定」公開予定</dd>
               </div>
             </dl>
-            <a href="" class="c-button">READ MORE</a>
+            <a href="information" class="c-button">READ MORE</a>
           </section>
           <section class="c-layout__content p-info-link">
             <h2><img src="./static/img/link.svg" alt="LINK" /></h2>
