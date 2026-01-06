@@ -20,17 +20,21 @@
     scroll-snap-type: x mandatory;
     scroll-snap-stop: always;
     scroll-behavior: smooth;
-    scroll-marker-group: after;
-    scrollbar-width: none;
+    scrollbar-width: auto;
 
-    &::scroll-marker-group {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      grid-area: markers;
-      align-items: center;
-      scroll-snap-type: x mandatory;
-      overscroll-behavior-x: contain;
+    @supports selector(::scroll-button(*)) {
+      scroll-marker-group: after;
+      scrollbar-width: none;
+
+      &::scroll-marker-group {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        grid-area: markers;
+        align-items: center;
+        scroll-snap-type: x mandatory;
+        overscroll-behavior-x: contain;
+      }
     }
   }
 
@@ -43,7 +47,7 @@
     place-content: center;
 
     @include mq() {
-      width: 85vw;
+      width: 68vw;
     }
 
     &::scroll-marker {
