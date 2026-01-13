@@ -5,15 +5,28 @@
   margin-bottom: $fb * 8;
 
   &__layout {
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(2px);
+    // background-image: linear-gradient(
+    //     to bottom,
+    //     rgba(255, 255, 255, 0),
+    //     rgba(255, 255, 255, 0) 50%,
+    //     rgba(255, 255, 255, 0.1) 50%,
+    //     rgba(255, 255, 255, 0.1)
+    //   ),
+    //   url("../static/img/bg.png"), url("../static/img/bg.jpg");
+    // background-size: 100% 4px, cover, 100%;
+    // background-attachment: fixed, fixed, fixed;
+    // background-repeat: repeat, no-repeat, no-repeat;
+    // background-position: center, center, top;
+    // background-blend-mode: hard-light, hard-light, normal;
+
+    background-color: $accentcolor;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     gap: $fn;
     padding-top: $fb;
-    padding-bottom: $fb;
     width: 100%;
+    min-height: 350px;
 
     @include mq() {
       flex-direction: column;

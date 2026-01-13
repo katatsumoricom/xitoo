@@ -9,7 +9,7 @@
   position: fixed;
   top: 120px;
   padding-left: $fn;
-  // mix-blend-mode: difference;
+  mix-blend-mode: difference;
   line-height: 2.5;
   font-weight: $bold;
   font-size: clamp(1.2rem, 1.086rem + 0.42vw, 1.6rem);

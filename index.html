@@ -16,12 +16,6 @@
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
     />
     <link rel="icon" href="../favicon.ico" />
-    <link
-      rel="preload"
-      as="style"
-      href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"
-      onload="this.rel='stylesheet'"
-    />
 
     <link href="./css/style.css" type="text/css" rel="stylesheet" />
   </head>
@@ -49,13 +43,13 @@
     <!-- DONE:レスポンシブ対応できてるか確認 -->
 
     <!-- DONE:Githubに上げて確認してもらう -->
-    <!-- TODO:トップ 背景にノイズ→アイコン画像の背景透過もらえるか聞く -->
-    <!-- TODO:ファビコンもらう -->
+    <!-- DONE: 1/6以降 お問い合わせ実装 -->
+    <!-- DONE:トップ 背景にノイズ→アイコン画像の背景透過もらえるか聞く -->
+    <!-- DONE:ファビコンもらう -->
 
     <!-- TODO: 1/6以降 micro cms対応 -->
     <!-- TODO: 1/6以降 スライダー対応 -->
     <!-- TODO: 1/6以降 お知らせページ タグ付けできたらやる -->
-    <!-- TODO: 1/6以降 お問い合わせ実装 -->
     <!-- TODO: 1/6以降 トップにあしらいかアニメーションつけたい（グリッチとか？） -->
 
     <!-- TODO: 納品前 不要なSCSS消す -->
@@ -125,9 +119,15 @@
           </figure>
         </div>
         <div class="p-profile__biography">
+          <!-- <figure>
+            <img
+              src="./static/img/profile.webp"
+              alt="蟹木しとお プロフィール写真"
+            />
+          </figure> -->
           <p>蟹木しとお</p>
           <p>
-            作曲家／シンガーソングライター／イラストレーター／ゲームクリエイター
+            作曲家／シンガーソングライター／イラストレーター／ゲームクリエイター／Vtuber／Live2Dモデラー
           </p>
 
           <p>
@@ -147,6 +147,11 @@
 
           <p>
             代表作には、「戯言の雑音」「404：虚像」「シロクロリバーシ」「一ツ眼リッパー殺人事件」「逢魔時の帰り方」など。
+          </p>
+
+          <p>
+            2026年から、完全セルフモデリングによる個人Vtuberとしても活動を開始。<br />
+            同時に、キャラクターデザインからモデリングまで手掛けるLive2Dモデラーとしても活動開始。
           </p>
         </div>
       </div>
@@ -315,7 +320,7 @@
       <small>&copy; xitoo</small>
     </footer>
 
-    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+    <script src="./static/js/progressbar.min.js"></script>
     <script src="./static/js/script.js"></script>
   </body>
 </html>

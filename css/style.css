@@ -789,7 +789,6 @@ header h1 {
 
 .c-textlink {
   color: #96ff00;
-  text-decoration: underline;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, #96ff00));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, #96ff00 50%);
   background-position: 0 0;
@@ -1078,6 +1077,7 @@ header h1 {
   position: fixed;
   top: 120px;
   padding-left: 1.6rem;
+  mix-blend-mode: difference;
   line-height: 2.5;
   font-weight: 900;
   font-size: clamp(1.2rem, 1.086rem + 0.42vw, 1.6rem);
@@ -1247,9 +1247,7 @@ header h1 {
   margin-bottom: 25rem;
 }
 .p-profile__layout {
-  background-color: rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  background-color: #96ff00;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1261,8 +1259,8 @@ header h1 {
           align-items: flex-end;
   gap: 1.6rem;
   padding-top: 3.125rem;
-  padding-bottom: 3.125rem;
   width: 100%;
+  min-height: 350px;
 }
 @media screen and (max-width: 768px) {
   .p-profile__layout {
