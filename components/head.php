@@ -15,16 +15,17 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="icon" href="../favicon.ico">
-    <link rel="preload" as="style" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css" onload="this.rel='stylesheet'">
+    <link href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+" rel="stylesheet">
 
     <link href="./css/style.css" type="text/css" rel="stylesheet">
 
 </head>
 
 <body>
-    <?php include('components/microcmsShow.php'); ?>
     <div id="loading" class="c-animation__loading">
-    <div class="c-animation__loading-content">
-        <div id="container" class="c-animation__loading-bar"></div>
+        <div class="c-animation__loading-content">
+            <div id="container" class="c-animation__loading-bar"></div>
+        </div>
     </div>
-</div>

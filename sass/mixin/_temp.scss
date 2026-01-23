@@ -22,12 +22,16 @@ $bold: 900;
 $basecolor: #040103;
 $maincolor: #a40f1e;
 $accentcolor: #96ff00;
+$gray: rgb(156, 156, 156);
 
-$gothic: Avenir, "Helvetica Neue", "Helvetica", Arial, "YuGothic",
-  "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-$mincho: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho",
+$gothic:
+  Avenir, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+  "Noto Sans JP", sans-serif;
+$mincho:
+  "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho",
   "MS PMincho", serif;
-$mincho-h: "Yuji Syuku", "Times New Roman", "YuMincho", "Hiragino Mincho ProN",
+$mincho-h:
+  "Yuji Syuku", "Times New Roman", "YuMincho", "Hiragino Mincho ProN",
   "Yu Mincho", "MS PMincho", serif;
 
 @mixin font {

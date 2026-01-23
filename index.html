@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -16,6 +16,12 @@
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
     />
     <link rel="icon" href="../favicon.ico" />
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+"
+      rel="stylesheet"
+    />
 
     <link href="./css/style.css" type="text/css" rel="stylesheet" />
   </head>
@@ -27,34 +33,16 @@
       </div>
     </div>
 
-    <!-- <?php include('components/head.php'); ?> -->
+    <!-- TODO: 実機確認（sp） -->
+    <!-- TODO:全体的なデザインの微調整 -->
 
-    <!-- DONE:ナビ スタイリング -->
-    <!-- DONE:トップに戻るボタン -->
-    <!-- DONE:ホバーアニメーション -->
-    <!-- DONE:背景にノイズ載せる -->
-    <!-- TODO:トップ パララックスにしたい -->
+    <!-- TODO:テストサイト公開（phpを静的サイトにしてgithub pageとか？　file_get_contents()） -->
 
-    <!-- DONE:インフォページ実装 -->
-    <!-- DONE:ガイドラインページ実装 -->
-
-    <!-- DONE:ローディング画面 -->
-    <!-- DONE:sp メニュー閉じるボタン 挙動 -->
-    <!-- DONE:レスポンシブ対応できてるか確認 -->
-
-    <!-- DONE:Githubに上げて確認してもらう -->
-    <!-- DONE: 1/6以降 お問い合わせ実装 -->
-    <!-- DONE:トップ 背景にノイズ→アイコン画像の背景透過もらえるか聞く -->
-    <!-- DONE:ファビコンもらう -->
-
-    <!-- TODO: 1/6以降 micro cms対応 -->
-    <!-- TODO: 1/6以降 スライダー対応 -->
-    <!-- TODO: 1/6以降 お知らせページ タグ付けできたらやる -->
-    <!-- TODO: 1/6以降 トップにあしらいかアニメーションつけたい（グリッチとか？） -->
-
+    <!-- TODO:納品前 micro cms隠匿化 -->
+    <!-- TODO: 納品前 SEO対策 -->
     <!-- TODO: 納品前 不要なSCSS消す -->
 
-    <div class="c-layout__scanlines"></div>
+    <!-- <div class="c-layout__scanlines"></div> -->
     <div class="c-layout__bgnoise"></div>
     <div class="c-layout">
       <header>
@@ -89,70 +77,95 @@
             <li class="c-nav__link">
               <a class="c-textlink" href="guideline">GUIDELINE</a>
             </li>
-            <li class="c-nav__link"><a class="c-textlink" href="">Skeb</a></li>
             <li class="c-nav__link">
-              <a class="c-textlink" href="">SHOP（BOOTH）</a>
+              <a
+                class="c-textlink"
+                href="https://skeb.jp/@xxxxitoo"
+                target="_blank"
+                >Skeb</a
+              >
             </li>
             <li class="c-nav__link">
-              <a class="c-textlink" href="mailto:shiro46jack#64;gmail.com"
+              <a
+                class="c-textlink"
+                href="https://xxxshitoo.booth.pm/"
+                target="_blank"
+                >SHOP（BOOTH）</a
+              >
+            </li>
+            <li class="c-nav__link">
+              <a
+                class="c-textlink"
+                href="mailto:shiro46jack&#64;gmail.com?subject=お問い合せ"
                 >CONTACT</a
               >
             </li>
           </ul>
         </nav>
       </header>
-      <!-- <?php include('components/header.php'); ?> -->
 
       <div id="profile" class="p-profile">
         <div class="p-profile__layout">
+          <div class="p-profile__bg-image">
+            <img src="./static/img/bg.jpg" alt="背景画像" />
+          </div>
           <h2>
             <img
               src="./static/img/top.svg"
               alt="蟹木しとお VOCALOIDプロデューサー インディーズゲームクリエイター イラストレーター"
             />
           </h2>
-          <figure>
-            <img
-              src="./static/img/profile.webp"
-              alt="蟹木しとお プロフィール写真"
-            />
-          </figure>
         </div>
         <div class="p-profile__biography">
-          <!-- <figure>
-            <img
-              src="./static/img/profile.webp"
-              alt="蟹木しとお プロフィール写真"
-            />
-          </figure> -->
-          <p>蟹木しとお</p>
-          <p>
-            作曲家／シンガーソングライター／イラストレーター／ゲームクリエイター／Vtuber／Live2Dモデラー
-          </p>
-
-          <p>
-            2013年、動画共有サイトにてボーカロイドを用いたオリジナル楽曲を発表し、創作活動を開始。<br />
-            以降、物語性と哲学的テーマを内包した独自の世界観を軸に、多彩な音楽作品を発表している。
-          </p>
-
-          <p>
-            イラストレーションは活動以前より継続しており、自身の楽曲MVやビジュアルアートは、基本的にすべて自身の手で制作。<br />
-            音楽と映像、物語が一体となった作品づくりを得意とし、セルフプロデュースによるマルチクリエイションを特徴としている。
-          </p>
-
-          <p>
-            アーティストへの楽曲提供や、ソーシャルゲームとのタイアップなど、外部プロジェクトへの参加も精力的に行う。<br />
-            また、漫画執筆、ゲーム制作、自身による歌唱など、表現領域は多岐にわたり、ジャンルを横断するクリエイターとして活動の幅を広げ続けている。
-          </p>
-
-          <p>
-            代表作には、「戯言の雑音」「404：虚像」「シロクロリバーシ」「一ツ眼リッパー殺人事件」「逢魔時の帰り方」など。
-          </p>
-
-          <p>
-            2026年から、完全セルフモデリングによる個人Vtuberとしても活動を開始。<br />
-            同時に、キャラクターデザインからモデリングまで手掛けるLive2Dモデラーとしても活動開始。
-          </p>
+          <div class="p-profile__biography__grid">
+            <span>
+              <h3>蟹木しとお</h3>
+              <p>
+                作曲家／シンガーソングライター／イラストレーター／ゲームクリエイター／Vtuber／Live2Dモデラー
+              </p>
+            </span>
+            <figure>
+              <img
+                src="https://images.microcms-assets.io/assets/260e54fa7b5e454d8114ab3f95337517/ca2f9fc485784aa99ef5042f16a5361e/profile.webp"
+                alt="蟹木しとお プロフィール写真"
+              />
+            </figure>
+          </div>
+          <div class="p-profile__details__pc">
+            <p>
+              2013年、動画共有サイトにてボーカロイドを用いたオリジナル楽曲を発表し、創作活動を開始。<br />以降、物語性と哲学的テーマを内包した独自の世界観を軸に、多彩な音楽作品を発表している。
+            </p>
+            <p>
+              イラストレーションは活動以前より継続しており、自身の楽曲MVやビジュアルアートは、基本的にすべて自身の手で制作。<br />音楽と映像、物語が一体となった作品づくりを得意とし、セルフプロデュースによるマルチクリエイションを特徴としている。
+            </p>
+            <p>
+              アーティストへの楽曲提供や、ソーシャルゲームとのタイアップなど、外部プロジェクトへの参加も精力的に行う。<br />また、漫画執筆、ゲーム制作、自身による歌唱など、表現領域は多岐にわたり、ジャンルを横断するクリエイターとして活動の幅を広げ続けている。
+            </p>
+            <p>
+              代表作には、「戯言の雑音」「404：虚像」「シロクロリバーシ」「一ツ眼リッパー殺人事件」「逢魔時の帰り方」など。
+            </p>
+            <p>
+              2026年から、完全セルフモデリングによる個人Vtuberとしても活動を開始。<br />同時に、キャラクターデザインからモデリングまで手掛けるLive2Dモデラーとしても活動開始。
+            </p>
+          </div>
+          <details class="p-profile__details__sp">
+            <summary class="c-button c-button__biography">BIOGRAPHY</summary>
+            <p>
+              2013年、動画共有サイトにてボーカロイドを用いたオリジナル楽曲を発表し、創作活動を開始。<br />以降、物語性と哲学的テーマを内包した独自の世界観を軸に、多彩な音楽作品を発表している。
+            </p>
+            <p>
+              イラストレーションは活動以前より継続しており、自身の楽曲MVやビジュアルアートは、基本的にすべて自身の手で制作。<br />音楽と映像、物語が一体となった作品づくりを得意とし、セルフプロデュースによるマルチクリエイションを特徴としている。
+            </p>
+            <p>
+              アーティストへの楽曲提供や、ソーシャルゲームとのタイアップなど、外部プロジェクトへの参加も精力的に行う。<br />また、漫画執筆、ゲーム制作、自身による歌唱など、表現領域は多岐にわたり、ジャンルを横断するクリエイターとして活動の幅を広げ続けている。
+            </p>
+            <p>
+              代表作には、「戯言の雑音」「404：虚像」「シロクロリバーシ」「一ツ眼リッパー殺人事件」「逢魔時の帰り方」など。
+            </p>
+            <p>
+              2026年から、完全セルフモデリングによる個人Vtuberとしても活動を開始。<br />同時に、キャラクターデザインからモデリングまで手掛けるLive2Dモデラーとしても活動開始。
+            </p>
+          </details>
         </div>
       </div>
       <main class="c-layout__container">
@@ -162,32 +175,81 @@
               <img src="./static/img/information.svg" alt="INFORMATION" />
             </h2>
             <dl class="p-info-news__list">
-              <div class="p-info-news__item">
-                <dt>2024.06.01</dt>
-                <dd>新曲「タイトル未定」公開予定</dd>
-              </div>
-              <div class="p-info-news__item">
-                <dt>2024.06.01</dt>
-                <dd>新曲「タイトル未定」公開予定</dd>
-              </div>
-              <div class="p-info-news__item">
-                <dt>2024.06.01</dt>
-                <dd>新曲「タイトル未定」公開予定</dd>
-              </div>
+              <a href="information?id=dtxombb9p" class="p-info-news__item">
+                <dt>2026.02.05</dt>
+                <dd>テストデータ4</dd>
+              </a>
+              <a href="information?id=owdce9kt5i" class="p-info-news__item">
+                <dt>2026.01.01</dt>
+                <dd>テストデータ3</dd>
+              </a>
+              <a href="information?id=yz6-vj5kofd" class="p-info-news__item">
+                <dt>2026.01.28</dt>
+                <dd>テストデータ2</dd>
+              </a>
             </dl>
             <a href="information" class="c-button">READ MORE</a>
           </section>
           <section class="c-layout__content p-info-link">
             <h2><img src="./static/img/link.svg" alt="LINK" /></h2>
             <div class="p-info-link__list">
-              <a href="" class="c-button" target="_blank">リンク先名1</a>
-              <a href="" class="c-button" target="_blank">リンク先名2</a>
-              <a href="" class="c-button" target="_blank">リンク先名3</a>
-              <a href="" class="c-button" target="_blank">リンク先名4</a>
-              <a href="" class="c-button" target="_blank">リンク先名1</a>
-              <a href="" class="c-button" target="_blank">リンク先名2</a>
-              <a href="" class="c-button" target="_blank">リンク先名3</a>
-              <a href="" class="c-button" target="_blank">リンク先名4</a>
+              <a
+                href="https://www.tunecore.co.jp/artists/xxxshitoo"
+                class="c-button"
+                target="_blank"
+                >TuneCore</a
+              >
+              <a
+                href="https://www.youtube.com/channel/UC5OIfqLmlyUN6anDP_h0G7Q"
+                class="c-button"
+                target="_blank"
+                >YouTube</a
+              >
+              <a
+                href="https://www.nicovideo.jp/user/1313469/mylist/38542380"
+                class="c-button"
+                target="_blank"
+                >niconico</a
+              >
+              <a
+                href="https://space.bilibili.com/425002507"
+                class="c-button"
+                target="_blank"
+                >bilibili</a
+              >
+              <a
+                href="https://www.pixiv.net/users/6346492"
+                class="c-button"
+                target="_blank"
+                >Pixiv</a
+              >
+              <a
+                href="https://skeb.jp/@xxxxitoo"
+                class="c-button"
+                target="_blank"
+                >Skeb</a
+              >
+              <a
+                href="https://xxxshitoo.booth.pm/"
+                class="c-button"
+                target="_blank"
+                >BOOTH</a
+              >
+              <a
+                href="https://nizima.com/Profile/555715"
+                class="c-button"
+                target="_blank"
+                >nizima</a
+              >
+              <a href="https://x.com/xxxxitoo" class="c-button" target="_blank"
+                >X(Twitter)</a
+              >
+              <a
+                href="https://www.instagram.com/410xitoo/"
+                class="c-button"
+                target="_blank"
+                >Instagram</a
+              >
             </div>
             <a class="c-textlink" href="guideline"
               >作品使用についてのガイドライン</a
@@ -200,6 +262,7 @@
           <a class="c-textlink" href="guideline"
             >作品使用についてのガイドライン</a
           >
+
           <section class="p-works__music">
             <h3><img src="./static/img/music.svg" alt="MUSIC" /></h3>
             <div class="p-works__content">
@@ -210,69 +273,168 @@
                   src="https://www.youtube.com/embed/videoseries?si=YcOjYUwFW3VvsUUC&amp;list=PLordceDMCDfmJnDUtsBXrRGJEqrUQAGxm"
                   title="YouTube video player"
                   frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allow="
+                    accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                    web-share;
+                  "
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
                 ></iframe>
               </div>
               <div class="p-works__button-flex">
-                <a href="" class="c-button" target="_blank">リンク先名1</a>
-                <a href="" class="c-button" target="_blank">リンク先名2</a>
-                <a href="" class="c-button" target="_blank">リンク先名3</a>
+                <a
+                  href="https://www.youtube.com/channel/UC5OIfqLmlyUN6anDP_h0G7Q"
+                  class="c-button"
+                  target="_blank"
+                  >YouTube</a
+                >
+                <a
+                  href="https://www.nicovideo.jp/user/1313469/mylist/38542380"
+                  class="c-button"
+                  target="_blank"
+                  >niconico</a
+                >
+                <a
+                  href="https://space.bilibili.com/425002507"
+                  class="c-button"
+                  target="_blank"
+                  >bilibili</a
+                >
               </div>
             </div>
           </section>
+
           <section class="p-works__game">
             <h3><img src="./static/img/game.svg" alt="GAME" /></h3>
-            <div class="p-works__content p-works__banner">
-              <a class="p-works__hover" href=""
-                ><img src="./static/img/hitotsume_logo.webp" alt="magune"
-              /></a>
+            <div class="p-works__content">
+              <div
+                class="splide"
+                role="group"
+                aria-label="Splideの基本的なHTML"
+              >
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide p-works__banner">
+                      <a
+                        class="p-works__hover"
+                        href="https://one-eyed-ripper.jimdofree.com/"
+                        ><img
+                          src="https://images.microcms-assets.io/assets/260e54fa7b5e454d8114ab3f95337517/7191ea37f41f4be891d58b2e7fb92c07/hitotsume_logo.webp"
+                          alt="一ツ眼リッパー"
+                      /></a>
+                    </li>
+                    <li class="splide__slide p-works__banner">
+                      <a
+                        class="p-works__hover"
+                        href="https://one-eyed-ripper.jimdofree.com/"
+                        ><img
+                          src="https://images.microcms-assets.io/assets/260e54fa7b5e454d8114ab3f95337517/7191ea37f41f4be891d58b2e7fb92c07/hitotsume_logo.webp"
+                          alt="一ツ眼リッパー"
+                      /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <!-- <div class="p-works__content c-carousel__wrapper">
-              <ul class="c-carousel__container">
-                <li class="c-carousel__item">
-                  <a class="p-works__hover" href=""
-                    ><img
-                      src="./static/img/hitotsume_logo.webp"
-                      alt="一ツ眼リッパー"
-                  /></a>
-                </li>
-                <li class="c-carousel__item">
-                  <a class="p-works__hover" href=""
-                    ><img
-                      src="./static/img/hitotsume_logo.webp"
-                      alt="一ツ眼リッパー"
-                  /></a>
-                </li>
-              </ul>
-            </div> -->
           </section>
+
           <section class="p-works__utau">
             <h3><img src="./static/img/utau.svg" alt="UTAU" /></h3>
-            <div class="p-works__content p-works__banner">
-              <a class="p-works__hover" href=""
-                ><img src="./static/img/magene_logo.webp" alt="magune"
-              /></a>
+            <div class="p-works__content">
+              <figure class="p-works__banner">
+                <a
+                  class="p-works__hover"
+                  href="https://shiro46jack.wixsite.com/magene"
+                  target="_blank"
+                >
+                  <img
+                    src="https://images.microcms-assets.io/assets/260e54fa7b5e454d8114ab3f95337517/f69ca90e3ffa4c63bf86fa1ac702e218/magene_logo.webp"
+                    alt="ゲームバナー"
+                  />
+                </a>
+              </figure>
             </div>
+            <!-- /.p-works__content -->
           </section>
+
           <section class="p-works__art">
             <h3><img src="./static/img/art.svg" alt="ART" /></h3>
             <div class="p-works__content">
-              <figure><img src="./static/img/art.webp" alt="ART" /></figure>
+              <figure class="p-works__banner">
+                <img
+                  src="https://images.microcms-assets.io/assets/260e54fa7b5e454d8114ab3f95337517/d02aaa90c6554759bc5ad732096a5df5/art.webp"
+                  alt="ゲームバナー"
+                />
+              </figure>
+
               <div class="p-works__button-flex">
-                <a href="" class="c-button" target="_blank">リンク先名1</a>
-                <a href="" class="c-button" target="_blank">リンク先名2</a>
+                <a
+                  href="https://www.pixiv.net/users/6346492"
+                  class="c-button"
+                  target="_blank"
+                  >Pixiv</a
+                >
+                <a
+                  href="https://skeb.jp/@xxxxitoo"
+                  class="c-button"
+                  target="_blank"
+                  >Skeb</a
+                >
               </div>
             </div>
+            <!-- /.p-works__content -->
           </section>
+
           <section class="p-works__shop">
             <h3><img src="./static/img/shop.svg" alt="SHOP" /></h3>
             <div class="p-works__content">
-              <a class="p-works__hover" href=""
-                ><img src="./static/img/shop.webp" alt="ART"
-              /></a>
+              <figure class="p-works__banner">
+                <a
+                  class="p-works__hover"
+                  href="https://xxxshitoo.booth.pm/"
+                  target="_blank"
+                >
+                  <img
+                    src="https://images.microcms-assets.io/assets/260e54fa7b5e454d8114ab3f95337517/1cc07a8144a74154b13594c99476c74a/shop.webp"
+                    alt="ゲームバナー"
+                  />
+                </a>
+              </figure>
             </div>
+            <!-- /.p-works__content -->
+          </section>
+
+          <section class="p-works__live2d">
+            <h3><img src="./static/img/live2d.svg" alt="Live2D" /></h3>
+            <div class="p-works__content">
+              <figure class="p-works__banner">
+                <img
+                  src="https://images.microcms-assets.io/assets/260e54fa7b5e454d8114ab3f95337517/2b59aaf29b474c1d9c9e21df268289c4/kanikisito.webp"
+                  alt="ゲームバナー"
+                />
+              </figure>
+
+              <div class="p-works__button-flex">
+                <a
+                  href="https://nizima.com/Profile/555715"
+                  class="c-button"
+                  target="_blank"
+                  >nizima</a
+                >
+                <a
+                  href="https://www.youtube.com/channel/UCMEEx3zPI_oOb6Y6LU_33nA"
+                  class="c-button"
+                  target="_blank"
+                  >蟹木しとおVチャンネル</a
+                >
+              </div>
+            </div>
+            <!-- /.p-works__content -->
           </section>
         </div>
         <!-- /.p-works -->
@@ -282,8 +444,6 @@
       <!-- <a href="#" id="return" class="c-mq__fixed-return"><img src="./static/img/return.png" alt="トップに戻る"><img src="./static/img/blank.svg" alt="トップに戻る"></a> -->
     </div>
     <!-- /.c-layout -->
-
-    <!-- <?php include('components/footer.php'); ?> -->
 
     <p class="c-animation__sclolldown">SCROLL DOWN</p>
 
@@ -298,28 +458,101 @@
           <li><a class="c-textlink" href="index#profile">PROFILE</a></li>
           <li><a class="c-textlink" href="information">INFORMATION</a></li>
           <li><a class="c-textlink" href="index#works">WORKS</a></li>
-        </ul>
-        <ul>
           <li><a class="c-textlink" href="guideline">GUIDELINE</a></li>
-          <li><a class="c-textlink" href="">Skeb</a></li>
-          <li><a class="c-textlink" href="">SHOP（BOOTH）</a></li>
           <li>
-            <a class="c-textlink" href="mailto:shiro46jack#64;gmail.com"
+            <a
+              class="c-textlink"
+              href="mailto:shiro46jack&#64;gmail.com?subject=お問い合せ"
               >CONTACT</a
             >
           </li>
         </ul>
         <ul>
-          <li><a class="c-textlink" href="">Turn core</a></li>
-          <li><a class="c-textlink" href="">YouTube</a></li>
-          <li><a class="c-textlink" href="">niconico</a></li>
-          <li><a class="c-textlink" href="">bilibili</a></li>
-          <li><a class="c-textlink" href="">Pixiv</a></li>
+          <li>
+            <a
+              href="https://www.tunecore.co.jp/artists/xxxshitoo"
+              class="c-textlink"
+              target="_blank"
+              >TuneCore</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UC5OIfqLmlyUN6anDP_h0G7Q"
+              class="c-textlink"
+              target="_blank"
+              >YouTube</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.nicovideo.jp/user/1313469/mylist/38542380"
+              class="c-textlink"
+              target="_blank"
+              >niconico</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://space.bilibili.com/425002507"
+              class="c-textlink"
+              target="_blank"
+              >bilibili</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.pixiv.net/users/6346492"
+              class="c-textlink"
+              target="_blank"
+              >Pixiv</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://skeb.jp/@xxxxitoo"
+              class="c-textlink"
+              target="_blank"
+              >Skeb</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://xxxshitoo.booth.pm/"
+              class="c-textlink"
+              target="_blank"
+              >BOOTH</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://nizima.com/Profile/555715"
+              class="c-textlink"
+              target="_blank"
+              >nizima</a
+            >
+          </li>
+          <li>
+            <a href="https://x.com/xxxxitoo" class="c-textlink" target="_blank"
+              >X(Twitter)</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/410xitoo/"
+              class="c-textlink"
+              target="_blank"
+              >Instagram</a
+            >
+          </li>
         </ul>
       </nav>
       <small>&copy; xitoo</small>
     </footer>
 
+    <script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
     <script src="./static/js/progressbar.min.js"></script>
     <script src="./static/js/script.js"></script>
   </body>

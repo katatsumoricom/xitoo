@@ -15,6 +15,10 @@ body {
 
 body {
   @include font;
+  text-autospace: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: strict;
   position: relative;
   background-color: $basecolor;
   color: $maincolor;

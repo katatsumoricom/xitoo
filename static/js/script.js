@@ -6,22 +6,22 @@ window.onload = function () {
     strokeWidth: 4,
     easing: "easeInOut",
     duration: 1400,
-    color: "#d8fe51",
+    color: "#96ff00",
     trailColor: "#6d6d6d",
     trailWidth: 1,
     svgStyle: { width: "100%", height: "100%" },
     text: {
       style: {
-        color: '#d8fe51',
-        textAlign: 'center',
+        color: "#96ff00",
+        textAlign: "center",
       },
-      autoStyleContainer: false
+      autoStyleContainer: false,
     },
-    from: { color: "#d8fe51" },
-    to: { color: "#d8fe51" },
+    from: { color: "#96ff00" },
+    to: { color: "#96ff00" },
     step: (state, bar) => {
       bar.setText(Math.round(bar.value() * 100) + " %");
-    }
+    },
   });
 
   bar.animate(1.0);
@@ -29,7 +29,6 @@ window.onload = function () {
     spinner.classList.add("loaded");
   }, 2000);
 };
-
 
 //メニューを閉じる
 const navLink = document.querySelectorAll(".c-nav__link");
@@ -40,3 +39,8 @@ navLink.forEach(function (navClick) {
   });
 });
 
+var elms = document.getElementsByClassName("splide");
+
+for (var i = 0; i < elms.length; i++) {
+  new Splide(elms[i]).mount();
+}

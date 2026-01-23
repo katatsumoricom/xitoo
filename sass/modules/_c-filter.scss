@@ -1,0 +1,45 @@
+@use "../mixin" as *;
+
+.c-filter {
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 1rem;
+    max-width: 40em;
+    margin: 0 auto;
+
+    @include mq() {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &__tag.is-active {
+    color: $basecolor;
+    background-color: $accentcolor;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+    max-width: 40em;
+    margin: 0 auto;
+    @include padding(0, 1rem, 0, 1rem);
+
+    .is-active {
+      color: $gray;
+      &.num {
+        color: $basecolor;
+        background-color: $accentcolor;
+        @include padding(0, 1rem, 0, 1rem);
+      }
+    }
+  }
+  &__back {
+    max-width: 40em;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

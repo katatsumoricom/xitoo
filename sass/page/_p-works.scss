@@ -39,6 +39,7 @@
 
     @include mq() {
       grid-template-columns: 1fr;
+      margin-bottom: $fb * 2;
     }
 
     &:nth-of-type(even) {
@@ -80,11 +81,10 @@
   &__banner {
     a {
       aspect-ratio: 16/9;
-      background-color: rgba(109, 109, 109, 0.5);
+      background-color: rgba($gray, 0.7);
       border: solid 1px $accentcolor;
       display: grid;
       place-content: center;
-      @include padding($fb, $fn, $fb, $fn);
 
       img {
         aspect-ratio: 16/9;
@@ -100,17 +100,13 @@
     @include mq() {
       grid-template-columns: 1fr;
       row-gap: 1rem;
-      place-items: center;
+      place-items: start;
     }
 
     .c-button {
       @include margin(0, 0, 0, 0);
       @include padding(1rem, $fn, 1rem, $fn);
       width: 100%;
-
-      &::after {
-        display: none;
-      }
 
       @include mq() {
         width: fit-content;
@@ -156,7 +152,8 @@
     }
   }
 
-  &__art {
+  &__art,
+  &__live2d {
     figure {
       margin-bottom: $fb;
     }

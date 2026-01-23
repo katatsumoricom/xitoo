@@ -8,7 +8,7 @@
   justify-content: center;
   border: solid 1px $accentcolor;
   border-radius: 1rem;
-  background-color: rgba(109, 109, 109, 0.7);
+  background-color: rgba($gray, 0.7);
   @include margin(0, auto, 0, auto);
   @include padding($fn, $fb, $fn, $fb);
   width: fit-content;
@@ -47,5 +47,12 @@
     background-size: contain;
     background-position: center;
     @include margin(0, 0, 0, 1rem);
+  }
+
+  &__biography {
+    mix-blend-mode: multiply;
+    &::after {
+      transform: rotate(90deg);
+    }
   }
 }

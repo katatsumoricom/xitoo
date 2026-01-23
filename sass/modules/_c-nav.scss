@@ -17,7 +17,7 @@
 
   @include mq() {
     opacity: 1;
-    background-color: #6d6d6d;
+    background-color: $gray;
     mix-blend-mode: normal;
     width: 80vw;
     height: 100vh;

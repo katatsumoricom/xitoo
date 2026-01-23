@@ -6,7 +6,7 @@
     @include margin(0, auto, $fb * 2, auto);
   }
   &__content {
-    background-color: rgb(168, 168, 168);
+    background-color: $gray;
     max-width: 40em;
     @include margin($fn, auto, $fb * 2, auto);
     @include padding($fb, $fb, $fb, $fb);
@@ -23,5 +23,11 @@
     figure {
       @include margin(0, auto, $fb, auto);
     }
+  }
+
+  &__flex {
+    display: flex;
+    margin-bottom: $fn;
+    flex-wrap: wrap;
   }
 }
